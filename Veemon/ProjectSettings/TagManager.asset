@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Axe
+  - Player1
+  - Player2
+  - Crate1
+  - Pillar
   layers:
   - Default
   - TransparentFX
