@@ -21,5 +21,7 @@ public class Axe : MonoBehaviour
     {
         //Destroys the axe on collision
         Destroy(gameObject);
+
+        
     }
 }

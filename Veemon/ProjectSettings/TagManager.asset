@@ -10,6 +10,7 @@ TagManager:
   - Crate1
   - Pillar
   - HP Boost
+  - Crate2
   layers:
   - Default
   - TransparentFX

@@ -5,23 +5,15 @@ using UnityEngine;
 public class Crate : MonoBehaviour
 {
     //Variables
-    public float hitPoints = 2;
-
-    void Update()
-    {
-        //if no more hitpoints left then destroy crate
-        if(hitPoints <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+    public GameObject crackedCrate;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //when hit by axe remove 1 hitpoint
+        //when hit by axe spawn a cracked crate and destroy current crate
         if(collision.gameObject.tag == "Axe")
         {
-            hitPoints--;
+            Instantiate(crackedCrate, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

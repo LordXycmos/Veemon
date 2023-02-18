@@ -51,13 +51,23 @@ public class SceneReset : MonoBehaviour
     {
         //Deletes all the crates in the scene
         GameObject[] crates = GameObject.FindGameObjectsWithTag("Crate1");
-        foreach (GameObject crate in crates)
-            GameObject.Destroy(crate);
+        foreach (GameObject crate1 in crates)
+            GameObject.Destroy(crate1);
+
+        //Deletes all the cracked crates in the scene
+        GameObject[] CrackedCrates = GameObject.FindGameObjectsWithTag("Crate2");
+        foreach (GameObject crate2 in CrackedCrates)
+            GameObject.Destroy(crate2);
 
         //Deletes all the pillars in the scene
         GameObject[] pillars = GameObject.FindGameObjectsWithTag("Pillar");
         foreach (GameObject pillar in pillars)
             GameObject.Destroy(pillar);
+
+        //Deletes all the HP boosts in the scene
+        GameObject[] boosts = GameObject.FindGameObjectsWithTag("HP Boost");
+        foreach (GameObject boost in boosts)
+            GameObject.Destroy(boost);
 
         //Makes the players disappear from the scene
         player1.SetActive(false);
