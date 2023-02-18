@@ -8,7 +8,7 @@ public class Axe : MonoBehaviour
     public float liveTime = 0.24f;
     public float rotSpeed;
 
-    void Start()
+    void Update()
     {
         //Spins the axe
         transform.Rotate(0, 0, rotSpeed);

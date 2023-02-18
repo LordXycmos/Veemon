@@ -17,7 +17,7 @@ public class PlayerOneMovement : MonoBehaviour
         if (healthPoints <= 0)
         {
             gameObject.SetActive(false);
-            hpCounters.SetActive(true);
+            hpCounters.SetActive(false);
         }
 
         //Defines current position

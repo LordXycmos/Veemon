@@ -16,11 +16,11 @@ public class SpawnMap : MonoBehaviour
     private bool canSpawn = true;
     private float lwx = -16.5f;
     private float rwx = 16.5f;
-    private float x = 7.5f;
+    private float x = -7.5f;
     private float y = 4.5f;
 
     //Do I need this?
-    private void Update()
+    void Update()
     {
         if(GameObject.FindWithTag("Player1") == null || GameObject.FindWithTag("Player2") == null)
         {
@@ -49,7 +49,8 @@ public class SpawnMap : MonoBehaviour
                     y--;
                     x -= 16;
                 }
-                else if(i == 67)
+                
+                if(i == 67)
                 {
                     //Spawns player 1
                     player1.transform.position = new Vector3(x, y, 0);
@@ -84,8 +85,6 @@ public class SpawnMap : MonoBehaviour
                     Instantiate(crate, new Vector3(x, y, 0), Quaternion.identity);
                     x++;
                 }
-
-
             }
         }
     }

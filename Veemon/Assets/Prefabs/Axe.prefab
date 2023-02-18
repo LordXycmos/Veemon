@@ -137,4 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   liveTime: 0.24
-  rotSpeed: 100
+  rotSpeed: 13
