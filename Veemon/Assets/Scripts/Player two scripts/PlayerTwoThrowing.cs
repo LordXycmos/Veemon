@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerTwoThrowing : MonoBehaviour
 {
     //Variables
+    public AudioSource audioPlayer;
     public Transform firepoint;
     public GameObject axePrefab;
     public GameObject heldAxe;
@@ -13,12 +14,19 @@ public class PlayerTwoThrowing : MonoBehaviour
     public float cooldown = 0.5f;
     public bool canShoot = true;
 
+    void Start()
+    {
+        //Defines the audio source
+        audioPlayer = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         //Throws axe when K is pressed
         if (Input.GetKeyDown(KeyCode.K) && canShoot)
         {
             Throw();
+            audioPlayer.Play();
             canShoot = false;
             nextShot = Time.time + cooldown;
             heldAxe.SetActive(false);

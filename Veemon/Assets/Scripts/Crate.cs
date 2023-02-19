@@ -9,7 +9,7 @@ public class Crate : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //when hit by axe spawn a cracked crate and destroy current crate
+        //When hit by axe spawn a cracked crate and destroy current crate
         if(collision.gameObject.tag == "Axe")
         {
             Instantiate(crackedCrate, transform.position, Quaternion.identity);
