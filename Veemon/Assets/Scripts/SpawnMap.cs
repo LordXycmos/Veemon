@@ -19,7 +19,7 @@ public class SpawnMap : MonoBehaviour
     private float x = -7.5f;
     private float y = 4.5f;
 
-    //Do I need this?
+    //Resets the walls position when a player is missing
     void Update()
     {
         if(GameObject.FindWithTag("Player1") == null || GameObject.FindWithTag("Player2") == null)

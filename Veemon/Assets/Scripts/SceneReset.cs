@@ -15,12 +15,6 @@ public class SceneReset : MonoBehaviour
     private bool gameActive = false;
     private float time;
 
-    void Start()
-    {
-        //Do I need this?
-        time = Time.time + 3;
-    }
-
     void Update()
     {
         //Only works if the game is active
